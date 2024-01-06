@@ -4,8 +4,8 @@ const {design,services} = require('../controllers/productsController')
 
 
 router
-.get('/services/design',design)
-.get('/services',services)
+.get('/services/design', design)
+.get('/services', services)
 
 
 module.exports = router;

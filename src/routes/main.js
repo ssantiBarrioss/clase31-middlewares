@@ -1,9 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const {home} = require("../controllers/mainController")
+const {index, logueado} = require("../controllers/mainController")
 
+ const checkAdmin = require('../middlewares/CheckAdmin')
 
 router
-.get('/', home)
+.get('/', index)
+.get('/admin', checkAdmin, logueado)
 
 module.exports = router;
